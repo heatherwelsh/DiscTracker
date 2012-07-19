@@ -11,7 +11,71 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719034527) do
+ActiveRecord::Schema.define(:version => 20120719054052) do
+
+  create_table "disc_brands", :force => true do |t|
+    t.string   "brand",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disc_colors", :force => true do |t|
+    t.string   "color",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disc_levels", :force => true do |t|
+    t.string   "level",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disc_names", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disc_plastics", :force => true do |t|
+    t.string   "plastic",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disc_stabilities", :force => true do |t|
+    t.string   "stability",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disc_types", :force => true do |t|
+    t.string   "type",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "disc_weights", :force => true do |t|
+    t.integer  "weight"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "discs", :force => true do |t|
+    t.integer  "playerid",   :null => false
+    t.integer  "name",       :null => false
+    t.integer  "type",       :null => false
+    t.integer  "brand",      :null => false
+    t.integer  "plastic",    :null => false
+    t.integer  "color",      :null => false
+    t.integer  "stability"
+    t.integer  "weight"
+    t.integer  "level"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "discs", ["playerid"], :name => "index_discs_on_playerid"
 
   create_table "users", :force => true do |t|
     t.string   "playerid",                               :null => false

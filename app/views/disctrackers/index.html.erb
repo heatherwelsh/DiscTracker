@@ -1,0 +1,21 @@
+<h1>Listing disctrackers</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @disctrackers.each do |disctracker| %>
+  <tr>
+    <td><%= link_to 'Show', disctracker %></td>
+    <td><%= link_to 'Edit', edit_disctracker_path(disctracker) %></td>
+    <td><%= link_to 'Destroy', disctracker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Disctracker', new_disctracker_path %>

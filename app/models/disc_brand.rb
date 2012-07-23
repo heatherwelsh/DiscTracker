@@ -3,4 +3,6 @@ class DiscBrand < ActiveRecord::Base
   attr_accessible(:brand)
 
   validates(:brand, presence: true)
+
+  has_many(:disc)
 end

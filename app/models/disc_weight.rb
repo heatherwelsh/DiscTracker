@@ -3,4 +3,7 @@ class DiscWeight < ActiveRecord::Base
   attr_accessible(:weight)
 
   validates(:weight, presence: true)
+
+
+  has_many(:disc)
 end

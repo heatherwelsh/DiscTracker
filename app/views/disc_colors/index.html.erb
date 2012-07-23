@@ -1,0 +1,21 @@
+<h1>Listing disc_colors</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @disc_colors.each do |disc_color| %>
+  <tr>
+    <td><%= link_to 'Show', disc_color %></td>
+    <td><%= link_to 'Edit', edit_disc_color_path(disc_color) %></td>
+    <td><%= link_to 'Destroy', disc_color, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Disc color', new_disc_color_path %>

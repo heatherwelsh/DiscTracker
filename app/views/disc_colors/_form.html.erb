@@ -1,0 +1,17 @@
+<%= form_for(@disc_color) do |f| %>
+  <% if @disc_color.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disc_color.errors.count, "error") %> prohibited this disc_color from being saved:</h2>
+
+      <ul>
+      <% @disc_color.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

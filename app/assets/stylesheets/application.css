@@ -13,25 +13,58 @@
  */
 
 body {
-  background: #000000 url('Steampunk1_1024x768.jpg') no-repeat fixed;
+  border: solid 1px #ffffff;
+  background:  url('leather-steampunk_00327437.jpg') no-repeat fixed;
   width: 960px;
+  height: 500px;
+  margin: 40px auto;
+
+
 }
 
 header {
   width: 100%;
   margin: 0 auto;
+  color: #fff;
+  text-align: center;
 }
+
 nav {
-  border_bottom: solid 3px red;
+  border-bottom: solid 3px #B9B47D;
+  margin-top: 40px;
+  color: #fff;
 }
 
 nav ul {
-
   font-size: 22px;
   list-style-type: none;
   margin-bottom: 20px;
 }
+
 nav ul li{
+  border-right: solid 1px #B9B47D;
   display: inline;
   padding-right: 10px;
+}
+
+fieldset {
+  width: 70%;
+  height: 80px;
+  margin: 0 auto;
+}
+
+legend {
+  font-size: 18px;
+  color: #fff;
+}
+
+label, input {
+  margin: 20px 80px;
+  color: #fff;
+  font-size: 14px;
+}
+
+#submit {
+  margin-left: 130px;
+  color: #000;
 }

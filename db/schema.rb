@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719054052) do
+ActiveRecord::Schema.define(:version => 20120723134957) do
 
   create_table "disc_brands", :force => true do |t|
     t.string   "brand",      :null => false
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20120719054052) do
   end
 
   create_table "disc_weights", :force => true do |t|
-    t.integer  "weight"
+    t.integer  "weight",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -76,6 +76,11 @@ ActiveRecord::Schema.define(:version => 20120719054052) do
   end
 
   add_index "discs", ["playerid"], :name => "index_discs_on_playerid"
+
+  create_table "homes", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "playerid",                               :null => false

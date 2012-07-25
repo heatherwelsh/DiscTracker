@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>DiscTracker</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>DiscTracker</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+<header><h1>Disc Tracker</h1></header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Courses</li>
+        <li>How To Play</li>
+        <li>My Tracker</li>
+      </ul>
+    </nav>
 
-</body>
+    <section id="content">
+      <%= yield %>
+    </section>
+   </body>
 </html>

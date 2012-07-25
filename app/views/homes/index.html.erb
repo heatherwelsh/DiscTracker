@@ -1,21 +1,10 @@
-<h1>Listing homes</h1>
+<h2>Most widly played sport know one knows about</h2>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @homes.each do |home| %>
-  <tr>
-    <td><%= link_to 'Show', home %></td>
-    <td><%= link_to 'Edit', edit_home_path(home) %></td>
-    <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Home', new_home_path %>
+<form action = "" method = "post">
+  <fieldset>
+    <legend>Lost / Found </legend>
+    <label for="st">Report A Found Disc:</label>
+    <input type = "text" name = "disid" required />
+  </fieldset>
+  <input type = "submit" name = "submit" value = "Found Disc" />
+  </form>

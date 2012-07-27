@@ -1,0 +1,75 @@
+<%= form_for(@disc_v) do |f| %>
+  <% if @disc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disc.errors.count, "error") %> prohibited this disc from being saved:</h2>
+
+      <ul>
+        <% @disc.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <fieldset>
+    <legend>Add Disc</legend>
+
+    <ul id="double">
+      <li>
+        <label for="dis_name">Disc Name:</label>
+        <select name="name">
+          <option value="">Selecet Name</option>
+        </select>
+      </li>
+
+      <li>
+        <label for="dis_type">Disc Type: </label>
+        <select name="type">
+          <option value="">Selecet Type</option>
+        </select>
+      </li>
+
+    <li><label for="dis_brand">Disc Brand: </label>
+    <select name="brand">
+      <option value="">Selecet Brand</option>
+    </select>
+      </li>
+
+     <li> <label for="dis_plastic">Disc Plastic: </label>
+      <select name="name">
+        <option value="">Selecet Plastic</option>
+      </select>
+      </li>
+
+      <li><label for="dis_color">Disc Color: </label>
+      <select name="color">
+        <option value="">Select Color</option>
+        <% @disc_colors.each do |dc| %>
+          <option value="<%= dc[''disc_id']>"><%=  dc %></option>
+        <% end %>
+      </select>
+      </li>
+
+      <li><label for="dis_stability">Disc Stability: </label>
+      <select name="stability">
+        <option value="">Select Stability</option>
+      </select>
+      </li>
+
+     <li> <label for="dis_weight">Disc Weight: </label>
+      <select name="weight">
+        <option value="">Select Weight</option>
+      </select>
+      </li>
+
+     <li> <label for="dis_level">Disc Level: </label>
+      <select name="level">
+        <option value="">Se3lect Level</option>
+      </select>
+      </li>
+</ul>
+</fieldset>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>

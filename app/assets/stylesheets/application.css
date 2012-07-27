@@ -13,13 +13,33 @@
  */
 
 body {
-  border: solid 1px #ffffff;
-  background:  url('leather-steampunk_00327437.jpg') no-repeat fixed;
-  width: 960px;
+  /*border: solid 1px #ffffff;*/
+  background: url('leather-steampunk_00327437.jpg') no-repeat fixed;
+  width: 750px;
   height: 500px;
   margin: 40px auto;
+  color: #B9B47D;
+  font-size: 12px;
+}
 
+a:link, a:visited {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
+a:hover {
+    color: #bbb;
+}
+
+a:active {
+    text-shadow: -1px -1px 1px #555;
+    position: relative;
+    top: 1px;
+    left: 1px;
 }
 
 header {
@@ -36,35 +56,67 @@ nav {
 }
 
 nav ul {
-  font-size: 22px;
+  font-size: 18px;
   list-style-type: none;
   margin-bottom: 20px;
 }
 
 nav ul li{
-  border-right: solid 1px #B9B47D;
+  border: solid 3px #673512;
+  margin-right: 5px;
+  background: rgba(185, 180, 125, 0.3);
   display: inline;
-  padding-right: 10px;
+  padding: 3px 25px 3px 10px;
+  color: #B9B47D;
+  height: 65px;
+  width:160px;
+
+  -moz-border-radius-topright: 50px 25px;
+  border-top-right-radius: 50px 25px;
+}
+
+form ul {
+  list-style-type: none;
+}
+
+form ul li{
+  color: #272A3D;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 fieldset {
-  width: 70%;
-  height: 80px;
-  margin: 0 auto;
+  border: solid 3px #673512;
+  background: rgba(185, 180, 125, 0.6);
+
+  height: auto;
+  margin: 0 0 10px 0;
 }
 
 legend {
-  font-size: 18px;
-  color: #fff;
+  font-size: 20px;
+  color: #EDB23D;
 }
 
-label, input {
-  margin: 20px 80px;
-  color: #fff;
-  font-size: 14px;
-}
+label, input, select, textarea {
+        display: block;
+        width: 200px;
+        float: left;
+        margin: 1em 0 1em 0 ;
+    }
 
-#submit {
-  margin-left: 130px;
-  color: #000;
-}
+    select {
+        width: 150px;
+    }
+
+    label {
+        text-align: right;
+        width: 200px;
+        padding-right:1em;
+        font-size: 14px;
+        color: #272A3D;
+    }
+
+    .clear {
+      clear: both;
+    }

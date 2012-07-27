@@ -1,8 +1,7 @@
 class Disc < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible(:playerid, :name, :type, :brand, :plastic, :color, :stability, :weight, :level)
+  attr_accessible(:name, :type, :brand, :plastic, :color, :stability, :weight, :level)
 
-  validates(:playerid, presence: true)
   validates(:name, presence: true)
   validates(:type, presence: true)
   validates(:brand,presence: true)
@@ -19,6 +18,6 @@ class Disc < ActiveRecord::Base
   belongs_to(:disc_level)
   belongs_to(:disc_plastic)
   belongs_to(:disc_stability)
-  belongs_to(:weight)
-  belongs_to(:user)
+  belongs_to(:disc_weight)
+  belongs_to(:mytracker)
 end

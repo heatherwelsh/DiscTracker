@@ -1,17 +1,12 @@
-
-fieldset {
-  padding: 1em;
-  font:80%/1 sans-serif;
+form ul{
+column-count: 2;
+    column-rule: 1em solid black;
 }
 
-label {
-  float:left;
-  width:25%;
-  margin-right:0.5em;
-  padding-top:0.2em;
-  text-align:right;
-  font-weight:bold;
+form ul li{
+    column-span: all;
 }
+
 
 input:required:invalid, input:focus:invalid {
   /* insert your own styles for invalid form input */

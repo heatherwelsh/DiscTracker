@@ -4,6 +4,9 @@ DiscTracker::Application.routes.draw do
   root(:to => 'homes#index')
   resources(:homes)
 
+  resources(:mytrackers)
+  resources(:discs)
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

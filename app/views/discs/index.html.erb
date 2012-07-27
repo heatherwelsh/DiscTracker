@@ -1,0 +1,21 @@
+<h1>Listing discs</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @discs.each do |disc| %>
+  <tr>
+    <td><%= link_to 'Show', disc %></td>
+    <td><%= link_to 'Edit', edit_disc_path(disc) %></td>
+    <td><%= link_to 'Destroy', disc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Disc', new_disc_path %>

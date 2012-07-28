@@ -1,0 +1,2 @@
+class DiscTypeController < ApplicationController
+end

@@ -25,6 +25,14 @@ class DiscsController < ApplicationController
   # GET /discs/new.json
   def new
     @disc = Disc.new
+    @disc_name = DiscName.all
+    @disc_type = DiscType.all
+    @disc_brand = DiscBrand.all
+    @disc_plastic = DiscPlastic.all
+    @disc_color = DiscColor.all
+    @disc_stability = DiscStability.all
+    @disc_weight = DiscWeight.all
+    @disc_level = DiscLevel.all
 
     respond_to do |format|
       format.html # new.html.erb

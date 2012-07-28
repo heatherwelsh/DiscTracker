@@ -12,12 +12,55 @@
   <% end %>
   <fieldset>
     <legend>Add Disc</legend>
-    <%# @disc_color.each do |dc|%>
-    <%# select(f[color], [dc['color'], dc['id']])%>
-    <%# end %>
-</fieldset>
+    <ul>
+      <li>
+        <label for="unique id">Disc ID:</label>
+        <%= select 'disc', 'disc_id', options_from_collection_for_select(@disc_color, 'id','unique_id') %>
+      </li>
 
-<div class="actions">
-  <%= f.submit %>
-</div>
+      <li>
+        <label for="name">Name:</label>
+        <%= select 'disc', 'name', options_from_collection_for_select(@disc_name, 'id','name') %>
+      </li>
+
+      <li>
+        <label for="type">Type:</label>
+        <%= select 'disc', 'disc_type', options_from_collection_for_select(@disc_type, 'id', 'disc_type') %>
+      </li>
+
+      <li>
+        <label for="brand">Brand:</label>
+        <%= select 'disc', 'brand', options_from_collection_for_select(@disc_color, 'id','brand') %>
+      </li>
+
+      <li>
+        <label for="plastic">Plastic:</label>
+        <%= select 'disc', 'plastic', options_from_collection_for_select(@disc_color, 'id','plastic') %>
+      </li>
+
+      <li>
+        <label for="color">Color:</label>
+        <%= select 'disc', 'color', options_from_collection_for_select(@disc_color, 'id','color') %>
+      </li>
+
+      <li>
+        <label for="stability">Stability:</label>
+        <%= select 'disc', 'stability', options_from_collection_for_select(@disc_color, 'id','stability) %>
+      </li>
+
+      <li>
+        <label for="weight">Weight:</label>
+        <%= select 'disc', 'weight', options_from_collection_for_select(@disc_color, 'id','weight') %>
+      </li>
+
+      <li>
+        <label for="level">Level:</label>
+        <%= select 'disc', 'level', options_from_collection_for_select(@disc_color, 'id' ,'level') %>
+      </li>
+
+  </fieldset>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

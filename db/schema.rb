@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120723134957) do
+ActiveRecord::Schema.define(:version => 20120728180802) do
 
   create_table "disc_brands", :force => true do |t|
     t.string   "brand",      :null => false
@@ -50,13 +50,13 @@ ActiveRecord::Schema.define(:version => 20120723134957) do
   end
 
   create_table "disc_types", :force => true do |t|
-    t.string   "type",       :null => false
+    t.string   "disc_type",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "disc_weights", :force => true do |t|
-    t.integer  "weight",     :null => false
+    t.integer  "weight"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -78,6 +78,11 @@ ActiveRecord::Schema.define(:version => 20120723134957) do
   add_index "discs", ["playerid"], :name => "index_discs_on_playerid"
 
   create_table "homes", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "mytrackers", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

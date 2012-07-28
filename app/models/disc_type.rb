@@ -1,8 +1,8 @@
 class DiscType < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible(:type)
+  attr_accessible(:disc_type)
 
-  validates(:type, presence: true)
+  validates(:disc_type, presence: true)
 
   has_many(:disc)
 end

@@ -1,9 +1,17 @@
+
+
 form ul{
-column-count: 2;
-    column-rule: 1em solid black;
+  column-count: 2;
+ /* column-rule: 0.8em solid black;*/
+  width: 100%;
+  height: 100%;
+
+  margin: 0px 0px 0 -80px;
+  padding: 0px
 }
 
 form ul li{
+
     column-span: all;
 }
 

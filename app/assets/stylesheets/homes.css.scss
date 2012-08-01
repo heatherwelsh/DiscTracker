@@ -1,3 +1,118 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  /*border: solid 1px #ffffff;*/
+  background: url('leather-steampunk_00327437.jpg') no-repeat fixed;
+  width: 750px;
+  height: 500px;
+  margin: 40px auto;
+  color: #B9B47D;
+  font-size: 12px;
+}
+
+a:link, a:visited {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #bbb;
+}
+
+a:active {
+    text-shadow: -1px -1px 1px #555;
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+nav {
+  border-bottom: solid 3px #B9B47D;
+  margin-top: 40px;
+  color: #fff;
+}
+
+nav ul {
+  font-size: 18px;
+  list-style-type: none;
+  margin: 0 0 20px -40px;
+}
+
+nav ul li{
+  display: inline;
+}
+
+nav#top ul li {
+  border: solid 3px #673512;
+  margin-right: 5px;
+  background: rgba(185, 180, 125, 0.3);
+  padding: 3px 25px 3px 10px;
+  color: #B9B47D;
+  height: 65px;
+  width:160px;
+ -moz-border-radius-topright: 50px 25px;
+  border-top-right-radius: 50px 25px;
+}
+
+form ul {
+  list-style-type: none;
+
+
+}
+
+form ul li{
+  color: #272A3D;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+fieldset {
+  border: solid 3px #673512;
+  background: rgba(185, 180, 125, 0.6);
+
+  height: auto;
+  margin: 0 0 10px 0;
+
+}
+
+legend {
+  font-size: 20px;
+  color: #EDB23D;
+}
+
+label, input, select, textarea {
+        display: block;
+        width: 200px;
+        float: left;
+        margin: 1em 0 1em 0;
+    }
+
+    select {
+        width: 150px;
+    }
+
+
+    label {
+        text-align: right;
+        width: 200px;
+        padding-right:2em;
+        font-size: 14px;
+        color: #272A3D;
+    }
+
+    .clear {
+      clear: both;
+    }

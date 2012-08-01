@@ -2,7 +2,8 @@ DiscTracker::Application.routes.draw do
   devise_for :users
 
   root(:to => 'homes#index')
-  resources(:homes)
+ # root(:to => 'homes#courses')
+  #resources(:homes)
 
   resources(:mytrackers)
   resources(:discs)

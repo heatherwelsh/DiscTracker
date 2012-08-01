@@ -1,4 +1,5 @@
 class MytrackersController < ApplicationController
+  before_filter(:authenticate_user!)
 
   # GET /mytrackers
   # GET /mytrackers.json

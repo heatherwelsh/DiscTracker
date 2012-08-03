@@ -1,20 +1,19 @@
 
 
-form ul{
+form ul.add_disc{
   column-count: 2;
  /* column-rule: 0.8em solid black;*/
-  width: 100%;
+  width: 110%;
   height: 100%;
 
   margin: 0px 0px 0 -80px;
   padding: 0px
-}
 
-form ul li{
+   li{
 
     column-span: all;
+   }
 }
-
 
 input:required:invalid, input:focus:invalid {
   /* insert your own styles for invalid form input */

@@ -12,46 +12,46 @@
   <% end %>
   <fieldset>
     <legend>Add Disc</legend>
-    <ul>
+    <ul class="add_disc">
       <li>
         <label for="name">Name:</label>
-        <%= select("disc", "name", DiscName.all.collect { |n| [n.name, n.id]}, {:include_blank => 'Enter disc name'},{:selected => 'Enter disc name'}) %>
+        <%= select("disc", "name", DiscName.order('name ASC').all.collect { |n| [n.name, n.id]}, {:include_blank => 'Enter disc name'},{:selected => 'Enter disc name'}) %>
       </li>
 
       <li>
         <label for="disctype">Type:</label>
-        <%= select("disc", "disc_type", DiscType.all.collect {|t| [t.disc_type, t.id]}, {:include_blank => 'Enter disc type'},{:selected => 'Enter disc type'}) %>
+        <%= select("disc", "disc_type", DiscType.order('disc_type ASC').all.collect {|t| [t.disc_type, t.id]}, {:include_blank => 'Enter disc type'},{:selected => 'Enter disc type'}) %>
       </li>
 
       <li>
         <label for="brand">Brand:</label>
-        <%= select("disc", "brand", DiscBrand.all.collect {|b| [b.brand, b.id]}, {:include_blank => 'Enter disc brand'},{:selected => 'Enter disc brand'}) %>
+        <%= select("disc", "brand", DiscBrand.order('brand ASC').all.collect {|b| [b.brand, b.id]}, {:include_blank => 'Enter disc brand'},{:selected => 'Enter disc brand'}) %>
       </li>
 
       <li>
         <label for="plastic">Plastic:</label>
-        <%= select("disc", "plastic", DiscPlastic.all.collect { |p| [p.plastic, p.id]}, {:include_blank => 'Enter disc plastic'}, {:selected => 'Enter discplastic'}) %>
+        <%= select("disc", "plastic", DiscPlastic.order('plastic ASC').all.collect { |p| [p.plastic, p.id]}, {:include_blank => 'Enter disc plastic'}, {:selected => 'Enter discplastic'}) %>
       </li>
 
       <li>
         <label for="color">Color:</label>
-        <%= select("disc", "color", DiscColor.all.collect {|c| [c.color, c.id]},{:include_blank => 'Enter Disc Color'},{:selected => 'Enter disccolor'}) %>
+        <%= select("disc", "color", DiscColor.order('color ASC').all.collect {|c| [c.color, c.id]},{:include_blank => 'Enter Disc Color'},{:selected => 'Enter disccolor'}) %>
       </li>
 
       <li>
         <label for="stability">Stability:</label>
-        <%= select("disc", "stability", DiscStability.all.collect {|s| [s.stability, s.id]}, {:include_blank => 'Enter disc stability'},{:selected => 'Enter disc stability'} ) %>
+        <%= select("disc", "stability", DiscStability.order('stability ASC').all.collect {|s| [s.stability, s.id]}, {:include_blank => 'Enter disc stability'},{:selected => 'Enter disc stability'} ) %>
       </li>
 
       <li>
         <label for="weight">Weight:</label>
-        <%= select("disc", "weight", DiscWeight.all.collect {|w| [w.weight, w.id]}, {:include_blank => 'Enter disc weight'},{:selected => 'Enter disc weight'}) %>
+        <%= select("disc", "weight", DiscWeight.order('weight ASC').all.collect {|w| [w.weight, w.id]}, {:include_blank => 'Enter disc weight'},{:selected => 'Enter disc weight'}) %>
       </li>
 
       <li>
         <label for="level">Level:</label>
         <%# select 'disc', 'level', options_from_collection_for_select(@disc_level, 'id','level') %>
-        <%= select("disc", "level", DiscLevel.all.collect {|l| [l.level, l.id]}, {:include_blank => 'Enter disc level'}, {:selected => 'Enter disc level'})  %>
+        <%= select("disc", "level", DiscLevel.order('level ASC').all.collect {|l| [l.level, l.id]}, {:include_blank => 'Enter disc level'}, {:selected => 'Enter disc level'})  %>
       </li>
     </ul>
 

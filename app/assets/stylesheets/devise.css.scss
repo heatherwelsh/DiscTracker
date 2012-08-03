@@ -1,0 +1,35 @@
+/* ##################################################
+// # this is the css for all the devise pages like  #
+// # the user login (session page)                  #
+// ##################################################*/
+
+fieldset#usersignin ul{
+  margin-left: 100px;
+  width: 50%;
+
+}
+
+fieldset#usersignin label, input, select, textarea {
+        display: block;
+        width: 120px;
+        float: left;
+        margin: 1em 0 1em 0;
+    }
+
+    fieldset#usersignin input {
+        width: 100px;
+    }
+
+
+    fieldset#usersignin label {
+        text-align: right;
+        width: 120px;
+        padding-right:1em;
+        font-size: 14px;
+        color: #272A3D;
+    }
+
+
+div.clear {
+  clear: both;
+}

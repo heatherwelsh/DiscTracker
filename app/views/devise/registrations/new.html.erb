@@ -1,18 +1,32 @@
-<h2>Sign up</h2>
+<h2>MyTracker</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  <fieldset id="usersignin">
+    <legend>Sing Up</legend>
+    <ul>
+      <li>
+        <%= f.label :first_name %>
+        <%= f.fname_field :first_name %>
+      </li>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+      <li>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </li>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+      <li>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </li>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
+      <li>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+      </li>
+    </ul>
+  </fieldset>
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="clear"><%= render "devise/shared/links" %></div>

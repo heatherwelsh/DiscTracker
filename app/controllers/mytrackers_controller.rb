@@ -4,16 +4,16 @@ class MytrackersController < ApplicationController
   # GET /mytrackers
   # GET /mytrackers.json
   def index
-    #@mytrackers = Mytracker.all
+   @ mytrackers = Mytracker.all
 
-   # respond_to do |format|
-   #   format.html # index.html.erb
-   #   format.json { render json: @mytrackers }
-   # end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @mytrackers }
+    end
   end
 
-  # GET /mytrackers/1
-  # GET /mytrackers/1.json
+   GET /mytrackers/1
+   GET /mytrackers/1.json
   def show
     @mytracker = Mytracker.find(params[:id])
 
@@ -26,11 +26,11 @@ class MytrackersController < ApplicationController
   # GET /mytrackers/new
   # GET /mytrackers/new.json
   def new
-   # @mytracker = Mytracker.new
+    @mytracker = Mytracker.new
 
-   # respond_to do |format|
-   #   format.html # new.html.erb
-   #   format.json { render json: @mytracker }
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @mytracker }
    # end
   end
 

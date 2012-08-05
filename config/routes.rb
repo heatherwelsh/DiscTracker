@@ -1,9 +1,12 @@
 DiscTracker::Application.routes.draw do
-  devise_for :users
+  devise_for :Mytracker
+
+#devise_scope :Mytracker do
+ # get "sign_in", :to => "devise/sessions#new"
+#end
 
   root(:to => 'homes#index')
- # root(:to => 'homes#courses')
-  #resources(:homes)
+  resources(:homes)
 
   resources(:mytrackers)
   resources(:discs)

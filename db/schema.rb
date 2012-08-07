@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20120728180802) do
   end
 
   create_table "disc_weights", :force => true do |t|
-    t.integer  "weight"
+    t.integer  "weight",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,6 +1,17 @@
 <h1>My Tracker</h1>
+<% if user_signed_in? %>
+  <h5><%= link_to('Log out', destroy_user_session_url,
+                  :method => :delete,
+                  :confirm => "Are you sure you want to log out?") %>
+  </h5>
+<% end %>
 
 <%= link_to('Add Disc', new_disc_url) %>
+
+<% if !flash.empty? %>
+  <p><%= flash.note %></p>
+  <p><%= flash.alert %></p>
+ <% end %>
 
 <table>
 
@@ -17,13 +28,13 @@
     <th>Level</th>
   </tr>
 
-<%# @mytrackers.each do |mytracker| %>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-<%# end %>
+  <%# @mytrackers.each do |mytracker| %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  <%# end %>
 </table>
 <%= link_to('Add Disc', new_mytracker_url) %>
 

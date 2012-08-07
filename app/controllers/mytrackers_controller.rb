@@ -4,7 +4,7 @@ class MytrackersController < ApplicationController
   # GET /mytrackers
   # GET /mytrackers.json
   def index
-   @ mytrackers = Mytracker.all
+   @mytrackers = User.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -12,10 +12,10 @@ class MytrackersController < ApplicationController
     end
   end
 
-   GET /mytrackers/1
-   GET /mytrackers/1.json
+   #GET /mytrackers/1
+   #GET /mytrackers/1.json
   def show
-    @mytracker = Mytracker.find(params[:id])
+    @mytracker = User.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,12 +26,12 @@ class MytrackersController < ApplicationController
   # GET /mytrackers/new
   # GET /mytrackers/new.json
   def new
-    @mytracker = Mytracker.new
+    @mytracker = User.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @mytracker }
-   # end
+   end
   end
 
   # GET /mytrackers/1/edit
@@ -42,7 +42,7 @@ class MytrackersController < ApplicationController
   # POST /mytrackers
   # POST /mytrackers.json
   def create
-    @mytracker = Mytracker.new(params[:mytracker])
+    @mytracker = User.new(params[:mytracker])
 
     respond_to do |format|
       if @mytracker.save
@@ -58,7 +58,7 @@ class MytrackersController < ApplicationController
   # PUT /mytrackers/1
   # PUT /mytrackers/1.json
   def update
-    @mytracker = Mytracker.find(params[:id])
+    @mytracker = User.find(params[:id])
 
     respond_to do |format|
       if @mytracker.update_attributes(params[:mytracker])
@@ -74,7 +74,7 @@ class MytrackersController < ApplicationController
   # DELETE /mytrackers/1
   # DELETE /mytrackers/1.json
   def destroy
-    @mytracker = Mytracker.find(params[:id])
+    @mytracker = User.find(params[:id])
     @mytracker.destroy
 
     respond_to do |format|

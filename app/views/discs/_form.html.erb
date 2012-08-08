@@ -19,7 +19,7 @@
      <ul class="add_disc">
       <li>
         <label for="name">Name:</label>
-        <%= select("name", "name", DiscName.order('name ASC').all.collect { |n| [n.name, n.id]}, {:include_blank => 'Enter disc name'},{:selected => 'Enter disc name'}) %>
+        <%= select("name", "name", DiscName.order('name ASC').all.collect { |n| [n.name, n.id]}, {:include_blank => 'Enter disc name'},{:selected => 'Enter disc name'})%>
       </li>
 
       <li>

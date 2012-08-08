@@ -40,8 +40,7 @@ class DiscsController < ApplicationController
   # POST /discs
   # POST /discs.json
   def create
-    # @disc = Disc.new(params[:disc])
-
+    # @disc = Disc.new(params[:disc]) do |disc|
     @disc = Disc.create(params[:disc])
 
     respond_to do |format|

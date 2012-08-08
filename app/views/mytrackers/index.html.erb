@@ -8,11 +8,6 @@
 
 <%= link_to('Add Disc', new_disc_url) %>
 
-<% if !flash.empty? %>
-  <p><%= flash.note %></p>
-  <p><%= flash.alert %></p>
- <% end %>
-
 <table>
 
   <tr>
@@ -37,6 +32,4 @@
   <%# end %>
 </table>
 <%= link_to('Add Disc', new_mytracker_url) %>
-
-
 

@@ -62,9 +62,10 @@ ActiveRecord::Schema.define(:version => 20120728180802) do
   end
 
   create_table "discs", :force => true do |t|
+    t.integer  "disc_id"
     t.integer  "playerid",   :null => false
     t.integer  "name",       :null => false
-    t.integer  "type",       :null => false
+    t.integer  "disc_type",  :null => false
     t.integer  "brand",      :null => false
     t.integer  "plastic",    :null => false
     t.integer  "color",      :null => false

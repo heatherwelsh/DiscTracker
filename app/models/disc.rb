@@ -1,8 +1,7 @@
 class Disc < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible(:disc_id, :user_id, :name, :disc_type, :brand, :plastic, :color, :stability, :weight, :level)
+  attr_accessible(:disc_id, :playerid, :name, :disc_type, :brand, :plastic, :color, :stability, :weight, :level)
 
-  validates(:user_id, presence: true)
   validates(:name, presence: true)
   validates(:disc_type, presence: true)
   validates(:brand,presence: true)

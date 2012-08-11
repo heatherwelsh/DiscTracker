@@ -2,7 +2,9 @@ class DiscsController < ApplicationController
   # GET /discs
   # GET /discs.json
   def index
-    @discs = Disc.all
+     # @output = "Current Playerid: #{current_user.id}"
+
+    @discs = Disc.where("playerid = #{current_user.id}")
 
     respond_to do |format|
       format.html # index.html.erb

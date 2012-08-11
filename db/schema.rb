@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120728180802) do
+ActiveRecord::Schema.define(:version => 20120726192331) do
 
   create_table "disc_brands", :force => true do |t|
     t.string   "brand",      :null => false
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(:version => 20120728180802) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "disc_types", :force => true do |t|
-    t.string   "disc_type",  :null => false
+  create_table "disc_styles", :force => true do |t|
+    t.string   "style",      :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20120728180802) do
     t.integer  "disc_id"
     t.integer  "playerid",   :null => false
     t.integer  "name",       :null => false
-    t.integer  "disc_type",  :null => false
+    t.integer  "style",      :null => false
     t.integer  "brand",      :null => false
     t.integer  "plastic",    :null => false
     t.integer  "color",      :null => false
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20120728180802) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "authentication_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

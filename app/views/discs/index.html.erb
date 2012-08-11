@@ -1,17 +1,41 @@
-<h1>Listing discs</h1>
+<h1>My Tracker</h1>
 
-<table>
+<div id="output">
+  <%= @output %>
+</div>
+<%= link_to 'New Disc', new_disc_path %>
+
+</br>
+
+<table border=1>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Edit</th>
+    <th>Remove</th>
+    <th>DiscID</th>
+    <th>Name</th>
+    <th>Style</th>
+    <th>Brand</th>
+    <th>Plastic</th>
+    <th>Color</th>
+    <th>Stability</th>
+    <th>Weight</th>
+    <th>Level</th>
   </tr>
 
 <% @discs.each do |disc| %>
   <tr>
-    <td><%= link_to 'Show', disc %></td>
+    <!--<td><%# link_to 'Show', disc %></td> -->
     <td><%= link_to 'Edit', edit_disc_path(disc) %></td>
     <td><%= link_to 'Destroy', disc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= disc[:discid]%>
+    <td><%= DiscName.select('name').where("id = 4")%>
+    <td><%= disc[:style]%>
+    <td><%= disc[:brand]%>
+    <td><%= disc[:plastic]%>
+    <td><%= disc[:color] %>
+    <td><%= disc[:stability]%>
+    <td><%= disc[:weight]%>
+    <td><%= disc[:level]%>
   </tr>
 <% end %>
 </table>

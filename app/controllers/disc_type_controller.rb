@@ -1,2 +1,0 @@
-class DiscTypeController < ApplicationController
-end

@@ -4,7 +4,7 @@ class CreateDiscs < ActiveRecord::Migration
       t.integer(:disc_id)
       t.integer(:playerid, :null => false)
       t.integer(:name, :null => false)
-      t.integer(:disc_type, :null => false)
+      t.integer(:style, :null => false)
       t.integer(:brand, :null => false)
       t.integer(:plastic, :null => false)
       t.integer(:color, :null => false)

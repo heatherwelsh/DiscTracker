@@ -1,20 +1,22 @@
 <h1>My Tracker</h1>
-<% if user_signed_in? %>
-  <h5><%= link_to('Log out', destroy_user_session_url,
+
+<div id="output">
+  <%= @output %>
+</div>
+<%= link_to('Log out', destroy_user_session_url,
                   :method => :delete,
                   :confirm => "Are you sure you want to log out?") %>
-  </h5>
-<% end %>
+| <%= link_to 'New Disc', new_disc_path %>
 
-<%= link_to('Add Disc', new_disc_url) %>
+</br>
 
-<table>
-
+<table border=1>
   <tr>
     <th>Edit</th>
+    <th>Remove</th>
     <th>DiscID</th>
     <th>Name</th>
-    <th>Type</th>
+    <th>Style</th>
     <th>Brand</th>
     <th>Plastic</th>
     <th>Color</th>
@@ -23,13 +25,24 @@
     <th>Level</th>
   </tr>
 
-  <%# @mytrackers.each do |mytracker| %>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  <%# end %>
+<% @discs.each do |disc| %>
+  <tr>
+    <!--<td><%# link_to 'Show', disc %></td> -->
+    <td><%= link_to 'Edit', edit_disc_path(disc) %></td>
+    <td><%= link_to 'Destroy', disc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= disc[:discid]%>
+    <td><%= disc.name %>
+    <td><%= disc.color%>
+    <td><%= disc.brand%>
+    <td><%= disc.plastic%>
+    <td><%= disc.color %>
+    <td><%= disc.stability%>
+    <td><%= disc.weight%>
+    <td><%= disc.level%>
+  </tr>
+<% end %>
 </table>
-<%= link_to('Add Disc', new_mytracker_url) %>
 
+<br />
+
+<%= link_to 'New Disc', new_disc_path %>

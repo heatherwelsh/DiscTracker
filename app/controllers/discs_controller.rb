@@ -1,10 +1,12 @@
 class DiscsController < ApplicationController
+  before_filter(:authenticate_user!)
+
   # GET /discs
   # GET /discs.json
   def index
-     # @output = "Current Playerid: #{current_user.id}"
+    # @output = "Current Playerid: #{current_user.id}"
 
-    @discs = Disc.where("playerid = #{current_user.id}")
+    @discs = Disc.all # where("playerid = #{current_user.id}")
 
     respond_to do |format|
       format.html # index.html.erb

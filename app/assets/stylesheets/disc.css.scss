@@ -1,0 +1,22 @@
+table {
+  border: solid 3px #673512;
+  background: rgba(185, 180, 125, 0.3);
+  color: #b9b47d;
+  width: 100%;
+  margin: 10px 0;
+}
+
+tr th {
+  backgrond: #A56042;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.even {
+  background: green;
+}
+
+.odd {
+  background: red;
+}

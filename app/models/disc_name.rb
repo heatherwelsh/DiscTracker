@@ -5,5 +5,5 @@ class DiscName < ActiveRecord::Base
 
   validates(:name, presence: true)
 
-  has_many(:disc)
+  has_many(:discs)
 end

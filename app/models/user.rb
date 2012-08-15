@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   :authentication_keys => [:playerid]
 
 
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible(:first_name, :last_name, :email, :playerid, :password, :password_confirmation, :remember_me)
   # attr_accessible :title, :body
@@ -15,6 +16,8 @@ class User < ActiveRecord::Base
   validates(:first_name, :presence => true)
   validates(:last_name, :presence => true)
   validates(:email, :presence => true)
+
+  has_many(:discs)
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

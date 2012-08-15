@@ -4,5 +4,5 @@ class DiscStyle < ActiveRecord::Base
 
   validates(:style, presence: true)
 
-  has_many(:disc)
+  has_many(:discs)
 end

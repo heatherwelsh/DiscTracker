@@ -4,5 +4,5 @@ class DiscLevel < ActiveRecord::Base
 
   validates(:level, presence: true)
 
-  has_many(:disc)
+  has_many(:discs)
 end

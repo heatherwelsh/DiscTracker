@@ -12,9 +12,9 @@
   <% end %>
   <fieldset>
     <legend>Add Disc</legend>
-    <%= f.hidden_field(:discid, :value => '123456')%>
+    <%= f.hidden_field(:disc_id, :value => SecureRandom.hex(10))%>
     <%= f.hidden_field(:playerid, :value => current_user.id)%>
-     <ul class="add_disc">
+    <ul class="add_disc">
       <li>
         <label for="name">Name:</label>
 

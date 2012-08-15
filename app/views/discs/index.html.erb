@@ -29,16 +29,16 @@
   <tr>
     <!--<td><%# link_to 'Show', disc %></td> -->
     <td><%= link_to 'Edit', edit_disc_path(disc) %></td>
-    <td><%= link_to 'Remove', disc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><%= disc[:discid]%>
-    <td><%= disc.name %>
-    <td><%= disc.color %>
-    <td><%= disc.brand%>
-    <td><%= disc.plastic%>
-    <td><%= disc.color %>
-    <td><%= disc.stability%>
-    <td><%= disc.weight%>
-    <td><%= disc.level%>
+    <td><%= link_to 'Remove', disc, method: :update, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= disc.disc_id %>
+    <td><%= disc.disc_name.name %>
+    <td><%= disc.disc_color.color %>
+    <td><%= disc.disc_brand.brand %>
+    <td><%= disc.disc_plastic.plastic%>
+    <td><%= disc.disc_color.color %>
+    <td><%= disc.disc_stability.stability%>
+    <td><%= disc.disc_weight.weight%>
+    <td><%= disc.disc_level.level%>
   </tr>
 <% end %>
 </table>

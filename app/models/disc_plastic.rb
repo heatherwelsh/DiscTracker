@@ -4,5 +4,6 @@ class DiscPlastic < ActiveRecord::Base
 
   validates(:plastic, presence: true)
 
-  has_many(:disc)
+  has_many(:discs)
+
 end

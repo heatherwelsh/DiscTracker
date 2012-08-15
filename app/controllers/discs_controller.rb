@@ -6,7 +6,7 @@ class DiscsController < ApplicationController
   def index
     # @output = "Current Playerid: #{current_user.id}"
 
-    @discs = Disc.all # where("playerid = #{current_user.id}")
+    @discs = Disc.where("playerid = #{current_user.id}")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,10 +17,11 @@ class DiscsController < ApplicationController
   # GET /discs/1
   # GET /discs/1.json
   def show
-    @disc = Disc.find(params[:id])
+   # @disc = Disc.find(params[:id])
+    @discs = Disc.where("playerid = #{current_user.id}")
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # index.html.erb
       format.json { render json: @disc }
     end
   end

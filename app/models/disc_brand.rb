@@ -4,5 +4,5 @@ class DiscBrand < ActiveRecord::Base
 
   validates(:brand, presence: true)
 
-  has_many(:disc)
+  has_many(:discs)
 end

@@ -1,3 +1,13 @@
+
+<div id="output">
+  <%= @output %>
+</div>
+<%= link_to('Log out', destroy_user_session_url,
+                  :method => :delete,
+                  :confirm => "Are you sure you want to log out?") %>
+| <%= link_to 'Add Disc', new_disc_path %> | <%= link_to 'Back', discs_path %>
+
+<br/><br/>
 <%= form_for(@disc) do |f| %>
   <% if @disc.errors.any? %>
     <div id="error_explanation">
@@ -11,10 +21,10 @@
     </div>
   <% end %>
   <fieldset>
-    <legend>Add Disc</legend>
+    <legend>WTF</legend>
     <%= f.hidden_field(:disc_id, :value => SecureRandom.hex(10))%>
     <%= f.hidden_field(:playerid, :value => current_user.id)%>
-    <ul class="add_disc">
+    <ul class="add_edit">
       <li>
         <label for="name">Name:</label>
 
@@ -63,4 +73,14 @@
     <%= f.submit %>
   </div>
 <% end %>
+</br>
+<div id="output">
+  <%= @output %>
+</div>
+<br/>
+<br/>
+<%= link_to('Log out', destroy_user_session_url,
+                  :method => :delete,
+                  :confirm => "Are you sure you want to log out?") %>
+| <%= link_to 'Add Disc', new_disc_path %> | <%= link_to 'Back', discs_path %>
 

@@ -1,8 +1,8 @@
 <h2>MyTracker</h2>
 
+<div id="login">
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <fieldset id="usersignin">
-    <legend>Sign In</legend>
+  <fieldset>
     <ul>
       <li>
         <%= f.label :playerid %>
@@ -26,3 +26,4 @@
 <% end %>
 
 <div class = "clear"><%= render "devise/shared/links" %></div>
+</div>

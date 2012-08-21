@@ -2,27 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(http://fonts.googleapis.com/css?family=Oregano|Peralta|Eagle+Lake|Port+Lligat+Sans|Fredericka+the+Great);
+
 body {
   /*border: solid 1px #ffffff;*/
-  background: url('leather-steampunk_00327437.jpg') no-repeat fixed;
-  width: 750px;
+  /*background: url('leather-steampunk_00327437.jpg') no-repeat fixed;*/
+  background: #15153B image-url('background.jpg') no-repeat fixed 600px 5px;
+ /* width: 750px;
   height: 500px;
-  margin: 40px auto;
-  color: #B9B47D;
-  font-size: 12px;
+  margin: 40px auto;*/
+  color: #FFFFCC;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: 'Loved by the King', cursive;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+  color: #D63B3B;
+}
+
+h2  {
+  font-size: 30px;
+  color: #E52727;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+
+#wrapper {
+  border: solid 0px #424966;
+  /*background: #56330C  image-url('mushroomdgprintfinal1-1024x805.jpg') no-repeat fixed 33px 0px;*/
+  /*background: rgba(255, 255, 255, .6);*/
+  padding: 20px;
+  float: left;
+  min-height: 550px;
+  width: 960px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+
+  /*-moz-box-shadow: 5px 5px 5px rgb(39, 72, 105);
+  -webkit-box-shadow: 5px 5px 5px rgb(39, 72, 105);
+  box-shadow: 5px 5px 5px rgb(39, 72, 105);*/
 }
 
 a:link, a:visited {
-    color: #aaa;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
     text-shadow: 1px 1px 1px #555;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 a:hover {
-    color: #bbb;
+    color: #339966;
 }
 
 a:active {
@@ -41,7 +73,7 @@ header {
 
 nav {
   border-bottom: solid 3px #B9B47D;
-  margin-top: 40px;
+  margin-top: 50px;
   color: #fff;
 }
 
@@ -67,16 +99,20 @@ nav#top ul li {
   border-top-right-radius: 50px 25px;
 }
 
+/**************************************************************************/
+
 form ul {
   list-style-type: none;
-
-
 }
 
 form ul li{
   color: #272A3D;
-  font-size: 3em;
+  font: 14px;
   font-weight: bold;
+ }
+
+form input#submit {
+  margin-top: 10px;
 }
 
 fieldset {
@@ -84,8 +120,12 @@ fieldset {
   background: rgba(185, 180, 125, 0.6);
 
   height: auto;
-  margin: 0 0 10px 0;
+  margin: 0 auto;
 
+  width: auto;
+
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 legend {
@@ -93,26 +133,43 @@ legend {
   color: #EDB23D;
 }
 
-label, input, select, textarea {
-        display: block;
-        width: 200px;
-        float: left;
-        margin: 1em 0 1em 0;
-    }
+label, input, textarea {
+  display: block;
+  float: left;
+  margin: 1em 0 1em 0;
+  color: #272A3D;
+  font: 14px;
+  font-weight: bold;
+  padding-right: 10px;
+  width: 220px;
+}
 
-    select {
-        width: 150px;
-    }
+input {
+  width: 180px;
+
+  input:required:invalid, input:focus:invalid {
+      /*insert your own styles for invalid form input */
+     -moz-box-shadow: none;
+     background: #245074;
+  }
+
+  select {
+    width: 150px;
+  }
+}
 
 
-    label {
-        text-align: right;
-        width: 200px;
-        padding-right:2em;
-        font-size: 14px;
-        color: #272A3D;
-    }
+.clear {
+  clear: both;
+}
 
-    .clear {
-      clear: both;
-    }
+
+
+#lostfound, #login {
+  width: 55%;
+  margin: 10px auto;
+
+}
+
+
+

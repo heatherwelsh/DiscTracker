@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>DiscTracker</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -7,7 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <wrapper>
+    <div id="wrapper">
       <header><h1>Disc Tracker</h1></header>
       <nav id = "top">
         <ul>
@@ -21,8 +22,10 @@
       <section id="content">
         <%= yield %>
       </section>
-    </wrapper>
+    <div>
   </body>
+
+
 </html>
 
 

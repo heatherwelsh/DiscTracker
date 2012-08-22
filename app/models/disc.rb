@@ -21,3 +21,7 @@ class Disc < ActiveRecord::Base
   belongs_to(:disc_weight, :foreign_key => "weight")
   belongs_to(:user, :foreign_key => "id")
 end
+
+
+
+

@@ -46,11 +46,13 @@ class DiscsController < ApplicationController
   # POST /discs.json
   def create
     # @disc = Disc.new(params[:disc])
+    params[:disc][:disc_id] = SecureRandom.hex(10)
     @disc = Disc.create(params[:disc])
 
     respond_to do |format|
       if @disc.save
-        format.html { redirect_to @disc, notice: 'Disc was successfully created.' }
+       # format.html { redirect_to @disc, notice: 'Disc was successfully created.' }
+        format.html { redirect_to :action => "index"}
         format.json { render json: @disc, status: :created, location: @disc }
       else
         format.html { render action: "new" }
@@ -66,10 +68,11 @@ class DiscsController < ApplicationController
 
     respond_to do |format|
       if @disc.update_attributes(params[:disc])
-        format.html { redirect_to @disc, notice: 'Disc was successfully updated.' }
+        #format.html { redirect_to @disc, notice: 'Disc was successfully updated.' }
+        format.html { redirect_to :action => "index"}
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: "index" }
         format.json { render json: @disc.errors, status: :unprocessable_entity }
       end
     end
@@ -84,6 +87,16 @@ class DiscsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to discs_url }
       format.json { head :no_content }
+    end
+  end
+
+  # REMOVE /discs/1
+  def remove
+    @disc = Disc.find(params[:id])
+    @disc.update_attributes(:playerid => 0)
+
+    respond_to do |format|
+        format.html {redirect_to :action => "index"}
     end
   end
 end

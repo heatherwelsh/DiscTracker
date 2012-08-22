@@ -2,63 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url(http://fonts.googleapis.com/css?family=Oregano|Peralta|Eagle+Lake|Port+Lligat+Sans|Fredericka+the+Great);
-
 body {
   /*border: solid 1px #ffffff;*/
-  /*background: url('leather-steampunk_00327437.jpg') no-repeat fixed;*/
-  background: #15153B image-url('background.jpg') no-repeat fixed 600px 5px;
- /* width: 750px;
+ /* background: url('leather-steampunk_00327437.jpg') no-repeat fixed;*/
+  background: #13153C image-url('background.jpg') no-repeat fixed 400px 0px;
+  width: 750px;
   height: 500px;
-  margin: 40px auto;*/
-  color: #FFFFCC;
-  font-size: 18px;
-  line-height: 20px;
-  font-family: 'Loved by the King', cursive;
-}
-
-h1 {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-  color: #D63B3B;
-}
-
-h2  {
-  font-size: 30px;
-  color: #E52727;
-  font-family: 'Fredericka the Great', cursive;
-}
-
-
-#wrapper {
-  border: solid 0px #424966;
-  /*background: #56330C  image-url('mushroomdgprintfinal1-1024x805.jpg') no-repeat fixed 33px 0px;*/
-  /*background: rgba(255, 255, 255, .6);*/
-  padding: 20px;
+  /* margin: 40px auto;*/
   float: left;
-  min-height: 550px;
-  width: 960px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 10px;
+}
 
-  /*-moz-box-shadow: 5px 5px 5px rgb(39, 72, 105);
-  -webkit-box-shadow: 5px 5px 5px rgb(39, 72, 105);
-  box-shadow: 5px 5px 5px rgb(39, 72, 105);*/
+wrapper {
+  border: solid 2px green;
+  width: 960px;
+  min-height: 500px;
+
 }
 
 a:link, a:visited {
-    color: #ffffff;
+    color: #F7F465;
     text-decoration: none;
-    text-shadow: 1px 1px 1px #555;
+    font-size: 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 a:hover {
-    color: #339966;
+    color: #37843A;
 }
 
 a:active {
-    text-shadow: -1px -1px 1px #555;
+    text-shadow: -1px -1px 1px #F7F465;
     position: relative;
     top: 1px;
     left: 1px;
@@ -72,8 +50,8 @@ header {
 }
 
 nav {
-  border-bottom: solid 3px #B9B47D;
-  margin-top: 50px;
+  border-bottom: solid 2px #45556D;
+  margin-top: 40px;
   color: #fff;
 }
 
@@ -88,7 +66,7 @@ nav ul li{
 }
 
 nav#top ul li {
-  border: solid 3px #673512;
+  border: solid 2px #45556D;
   margin-right: 5px;
   background: rgba(185, 180, 125, 0.3);
   padding: 3px 25px 3px 10px;
@@ -99,65 +77,56 @@ nav#top ul li {
   border-top-right-radius: 50px 25px;
 }
 
-/**************************************************************************/
-
 form ul {
   list-style-type: none;
+
+
 }
 
 form ul li{
   color: #272A3D;
-  font: 14px;
+  font-size: 3em;
   font-weight: bold;
- }
-
-form input#submit {
-  margin-top: 10px;
 }
 
 fieldset {
-  border: solid 3px #673512;
+  border: solid 3px #45556D;
   background: rgba(185, 180, 125, 0.6);
 
-  height: auto;
-  margin: 0 auto;
+  min-height: 30px;
 
-  width: auto;
+  margin: 0 0 10px 0;
+
+  padding: 20px 0 15px 0;
+  text-align: center;
 
   -moz-border-radius: 15px;
   border-radius: 15px;
+
 }
 
-legend {
+/*legend {
   font-size: 20px;
   color: #EDB23D;
-}
+}*/
 
-label, input, textarea {
-  display: block;
-  float: left;
-  margin: 1em 0 1em 0;
-  color: #272A3D;
-  font: 14px;
-  font-weight: bold;
-  padding-right: 10px;
-  width: 220px;
-}
-
-input {
-  width: 180px;
-
-  input:required:invalid, input:focus:invalid {
-      /*insert your own styles for invalid form input */
-     -moz-box-shadow: none;
-     background: #245074;
-  }
 
   select {
     width: 150px;
   }
-}
 
+  input {
+    width: 150px;
+
+  }
+
+
+label {
+  text-align: right;
+  font-size: 14px;
+  color: #13153C;
+  font-weight: bold;
+}
 
 .clear {
   clear: both;
@@ -165,11 +134,14 @@ input {
 
 
 
-#lostfound, #login {
-  width: 55%;
-  margin: 10px auto;
 
-}
+
+
+
+
+
+
+
 
 
 

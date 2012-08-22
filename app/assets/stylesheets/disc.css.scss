@@ -1,51 +1,31 @@
 table {
   border: solid 3px #673512;
-  background: rgba(185, 180, 125, 0.6);
-  color: #F2ED59;
+  background: rgba(185, 180, 125, 0.3);
+  color: #C1C6CC;
   width: 100%;
   margin: 10px 0;
+  font-size: 15px;
   font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
 
 tr th {
-  color: #502020;
+  backgrond: #143256;
   font-size: 18px;
   text-align: center;
-  font-weight: bold;
   padding-top: 5px;
+  color: #4F0916;
 }
 
-
+tr td {
+  padding: 5px;
+}
 
 .even {
-  background: rgba(97, 35, 36, .5);
+  background: #143256;
 }
 
 .odd {
-  background: rgba(47, 80, 113, .8);
+  background: #607FA3;
 }
-
-/************************************************************************/
-/****************** layout for disc forms (add - edit) ******************/
-
-form ul.add_edit{
-  column-count: 2;
- /* column-rule: 0.8em solid black;*/
-  width: 113%;
-  height: 100%;
-
-  padding: 0px
-
-  li {
-    column-span: all;
-
-   }
-
-}
-
-

@@ -1,7 +1,4 @@
 
-<div id="output">
-  <%= @output %>
-</div>
 <%= link_to('Log out', destroy_user_session_url,
                   :method => :delete,
                   :confirm => "Are you sure you want to log out?") %>
@@ -20,11 +17,9 @@
       </ul>
     </div>
   <% end %>
-  <fieldset>
-    <legend>WTF</legend>
-    <%= f.hidden_field(:disc_id, :value => SecureRandom.hex(10))%>
-    <%= f.hidden_field(:playerid, :value => current_user.id)%>
-    <ul class="add_edit">
+  <fieldset id="add_edit">
+    <%= f.hidden_field(:playerid, :value => current_user.id) %>
+    <ul id="double">
       <li>
         <label for="name">Name:</label>
 

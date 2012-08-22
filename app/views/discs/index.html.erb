@@ -25,22 +25,11 @@
     <th>Level</th>
   </tr>
 
-  <% i = 0 %>
 <% @discs.each do |disc| %>
-  <% j = i%2
-
-    if j == 0
-     j = "even"
-   else
-     j = "odd"
-    end
-
-    i = i+1
-   %>
-  <tr class = "<%= j %>">
+  <tr class = "<%= cycle("even", "odd") %>">
     <!--<td><%# link_to 'Show', disc %></td> -->
     <td><%= link_to 'Edit', edit_disc_path(disc) %></td>
-    <td><%= link_to 'Remove', disc, method: :update, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Remove', remove_disc_path(disc), method: :post, data: { confirm: 'Are you sure?' } %></td>
     <td><%= disc.disc_id %>
     <td><%= disc.disc_name.name %>
     <td><%= disc.disc_color.color %>

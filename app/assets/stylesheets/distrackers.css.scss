@@ -1,26 +1,40 @@
+fieldset#add_edit {
+  ul{
+    width:560px;
+    margin-bottom:20px;
+    overflow:hidden;
+    /*border-top:1px solid #ccc;*/
+  }
+  li{
+    line-height:1.5em;
+    /*border-bottom:1px solid #ccc;*/
+    float:left;
+    display:inline;
+  }
+
+  label {
+
+  }
+}
+#double li  { width:50%;} /* 2 col */
+#triple li  { width:33.333%; } /* 3 col */
+#quad li    { width:25%; } /* 4 col */
+#six li     { width:16.666%; } /* 6 col */
 
 
-form ul.add_disc{
-  column-count: 2;
- /* column-rule: 0.8em solid black;*/
-  width: 110%;
-  height: 100%;
-
-  margin: 0px 0px 0 -80px;
-  padding: 0px
-
-   li{
-
-    column-span: all;
-   }
+input:required:invalid, input:focus:invalid {
+  /* insert your own styles for invalid form input */
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: #899AB5;
 }
 
+input:required:valid {
+  /* insert your own styles for invalid form input */
+  -moz-box-shadow: none;
+  background: #ffffff;
+}
 
-
-
-
-
-
-
-
-
+input:required:valid, .psw, .cpsw {
+  background: #6CB56C;
+}

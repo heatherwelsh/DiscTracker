@@ -6,7 +6,11 @@ DiscTracker::Application.routes.draw do
 
 
   resources(:mytrackers)
-  resources(:discs)
+  resources(:discs) do
+    member do
+      post 'remove'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

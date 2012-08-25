@@ -8,12 +8,12 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <wrapper>
-      <header><h1>Disc Tracker</h1></header>
+    <header id="logo"><a href=""><h1>Disc Tracker</h1></a></header>
+    <div id="wrapper">
       <nav id = "top">
         <ul>
           <li><%= link_to('Home', root_url)%></li>
-          <li><a href="/homes/courses.html">Courses</a></li>
+          <li><%= link_to 'Courses', {:controller => 'homes', :action => 'courses'} %></li>
           <li>How To Play</li>
           <li><%= link_to('My Tracker', discs_url)%></li>
         </ul>

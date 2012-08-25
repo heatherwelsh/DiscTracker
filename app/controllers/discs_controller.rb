@@ -21,6 +21,7 @@ class DiscsController < ApplicationController
     @discs = Disc.where("playerid = #{current_user.id}")
 
     respond_to do |format|
+
       format.html # index.html.erb
       format.json { render json: @disc }
     end
@@ -55,6 +56,7 @@ class DiscsController < ApplicationController
         format.html { redirect_to :action => "index"}
         format.json { render json: @disc, status: :created, location: @disc }
       else
+
         format.html { render action: "new" }
         format.json { render json: @disc.errors, status: :unprocessable_entity }
       end

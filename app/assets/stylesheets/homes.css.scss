@@ -2,23 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 body {
   /*border: solid 1px #ffffff;*/
  /* background: url('leather-steampunk_00327437.jpg') no-repeat fixed;*/
-  background: #13153C image-url('background.jpg') no-repeat fixed 400px 0px;
-  width: 750px;
-  height: 500px;
-  /* margin: 40px auto;*/
+  background: #000000 image-url('nuke12_wide.gif') no-repeat fixed right bottom;
+  background-size: 80%;
+  width: 100%;
+
   float: left;
   color: #ffffff;
-  font-size: 12px;
-  line-height: 10px;
+  font-size: 14px;
+  line-height: 20px;
+
 }
 
-wrapper {
-  border: solid 2px green;
-  width: 960px;
+header#logo {
+  background: image-url('DiscTracker_Logos_yellow.gif') no-repeat 20px 20px;
+
+  height: 135px;
+  position: relative;
+}
+
+header#logo a
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 135px;
+}
+
+header#logo a h1
+{
+  display: none;
+}
+
+#wrapper {
+  border: solid 2px rgba(104, 141, 173, .5);
+  background: rgba(104, 141, 173, .3);
+  width: 75%;
   min-height: 500px;
+
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 
 }
 
@@ -42,23 +70,24 @@ a:active {
     left: 1px;
 }
 
-header {
+/*header {
   width: 100%;
   margin: 0 auto;
   color: #fff;
   text-align: center;
-}
+}*/
 
 nav {
-  border-bottom: solid 2px #45556D;
   margin-top: 40px;
   color: #fff;
+
+  padding-left: 20px;
 }
 
 nav ul {
   font-size: 18px;
   list-style-type: none;
-  margin: 0 0 20px -40px;
+  margin: 0 0 3px -40px;
 }
 
 nav ul li{
@@ -80,7 +109,6 @@ nav#top ul li {
 form ul {
   list-style-type: none;
 
-
 }
 
 form ul li{
@@ -93,10 +121,9 @@ fieldset {
   border: solid 3px #45556D;
   background: rgba(185, 180, 125, 0.6);
 
-  min-height: 30px;
+  width: 500px;
 
-  margin: 0 0 10px 0;
-
+  margin:0 0 10px 0;
   padding: 20px 0 15px 0;
   text-align: center;
 
@@ -132,7 +159,11 @@ label {
   clear: both;
 }
 
+#content {
+  border-top: solid 2px #45556D;
+  padding: 20px;
 
+}
 
 
 

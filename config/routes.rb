@@ -2,7 +2,8 @@ DiscTracker::Application.routes.draw do
   devise_for :user
 
   root(:to => 'homes#index')
-  resources(:homes)
+
+  # resources :homes
 
   resources(:mytrackers)
   resources(:discs) do
@@ -11,6 +12,7 @@ DiscTracker::Application.routes.draw do
     end
   end
 
+  match ':action' => 'homes#:action'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,21 +1,22 @@
 table {
-  border: solid 3px #673512;
-  background: rgba(185, 180, 125, 0.3);
-  color: #C1C6CC;
+  border: solid 2px #AFB6BC;
+  background: rgba(170, 202, 231, .3);
+  color: #4F0916;
   width: 100%;
   margin: 10px 0;
   font-size: 15px;
-  font-weight: bold;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+
+
 }
 
 tr th {
-  backgrond: #143256;
-  font-size: 18px;
+
+  backgrond: #AFB6BC;
+  font-size: 16px;
   text-align: center;
   padding-top: 5px;
   color: #4F0916;
+   font-weight: bold;
 }
 
 tr td {
@@ -23,9 +24,50 @@ tr td {
 }
 
 .even {
-  background: #143256;
+  background: #AAADAF;
 }
 
 .odd {
-  background: #607FA3;
+  background: #AFB6BC;
 }
+
+/***********************************************************************/
+/* rounded corners for table */
+/***********************************************************************/
+
+th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+/* make IE 6 Happy */
+.bordered tr:hover
+{
+  background: #fbf8e9;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+
+
+
+
+
+
+

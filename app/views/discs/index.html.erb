@@ -3,12 +3,7 @@
 <div id="output">
   <%= @output %>
 </div>
-<%= link_to('Log out', destroy_user_session_url,
-                  :method => :delete,
-                  :confirm => "Are you sure you want to log out?") %>
-| <%= link_to 'Add Disc', new_disc_path %> | <%= link_to 'Back', discs_path %>
 
-</br>
 
 <table>
   <tr>
@@ -43,10 +38,4 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to('Log out', destroy_user_session_url,
-                  :method => :delete,
-                  :confirm => "Are you sure you want to log out?") %>
-| <%= link_to 'Add Disc', new_disc_path %> | <%= link_to 'Back', discs_path %>
 
